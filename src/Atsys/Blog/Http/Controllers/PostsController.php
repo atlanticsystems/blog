@@ -27,7 +27,7 @@ class PostsController extends Controller
     {
         $categories = PostCategory::get()->pluck('title_translated', 'id');
 
-        return view('blog.admin.posts.form', compact('categories'));
+        return view('blog::admin.posts.create', compact('categories'));
     }
 
     public function store(PostRequest $request)
@@ -46,7 +46,7 @@ class PostsController extends Controller
     {
         $categories = PostCategory::get()->pluck('title_translated', 'id');
 
-        return view('blog.admin.posts.form', compact('post', 'categories'));
+        return view('blog::admin.posts.edit', compact('post', 'categories'));
     }
 
     public function update(PostRequest $request, Post $post)
