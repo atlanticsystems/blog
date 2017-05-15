@@ -1,0 +1,42 @@
+{
+    "name": "atsys/blog",
+    "description": "Simple blog optimized for SEO.",
+    "license": "MIT",
+    "type": "plugin",
+    "keywords": [
+        "blog",
+        "seo",
+        "laravel"
+    ],
+    "homepage": "https://github.com/josebailo/blog",
+    "require": {
+        "php": ">=5.6.4",
+        "illuminate/support": "5.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Atsys\\Blog\\": "src/Atsys/Blog"
+        }
+    },
+    "authors": [
+        {
+            "name": "Iván Hernández",
+            "email": "soporte@atsys.es",
+            "homepage": "http://atsys.es",
+            "role": "Developer"
+        },
+        {
+            "name": "Jose Bailo",
+            "email": "jmbailo@gmail.com",
+            "homepage": "https://github.com/josebailo",
+            "role": "Developer"
+        },
+        {
+            "name": "Juan José Naranjo",
+            "email": "juanjo@atsys.es",
+            "homepage": "http://juanjosenr.com",
+            "role": "Designer"
+        }
+    ],
+    "minimum-stability": "master"
+}
