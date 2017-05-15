@@ -24,7 +24,7 @@ class PostCategoriesController extends Controller
 
     public function create()
     {
-        return view('blog::admin.post_categories.form');
+        return view('blog::admin.post_categories.create');
     }
 
     public function store(PostCategoryRequest $request)
