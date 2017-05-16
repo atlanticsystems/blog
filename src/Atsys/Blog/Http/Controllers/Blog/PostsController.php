@@ -16,6 +16,6 @@ class PostsController extends Controller
 
         $categories = PostCategory::has('posts')->latest()->get()->sortBy('title_translated');
 
-        return view('blog::frontend.posts.index', compact('post', 'latest_posts', 'categories'));
+        return view('blog::frontend.posts.index', compact('posts', 'latest_posts', 'categories'));
     }
 }
