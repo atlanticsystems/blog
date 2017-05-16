@@ -12,7 +12,7 @@ class PostsController extends Controller
     {
         $posts = Post::with('postCategory')->latest()->paginate(10);
 
-        $latest_posts = Post::latest()->take(5);
+        $latest_posts = Post::latest()->take(5)->get();
 
         $categories = PostCategory::has('posts')->latest()->get()->sortBy('title_translated');
 
