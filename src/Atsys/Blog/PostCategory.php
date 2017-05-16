@@ -33,6 +33,6 @@ class PostCategory extends Model
 
     public function getRouteAttribute()
     {
-        return $this->alias_translated;
+        return "blog/{$this->alias_translated}";
     }
 }

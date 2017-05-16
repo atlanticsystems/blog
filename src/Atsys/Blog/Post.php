@@ -51,6 +51,6 @@ class Post extends Model
 
     public function getRouteAttribute()
     {
-        return $this->postCategory->route . '/' . $this->alias_translated;
+        return "{$this->postCategory->route}/{$this->alias_translated}";
     }
 }
