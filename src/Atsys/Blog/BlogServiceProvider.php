@@ -18,12 +18,12 @@ class BlogServiceProvider extends ServiceProvider
     {
         // Publish package files
         $this->loadRoutesFrom(__DIR__ . '/../../routes/web.php');
-        $this->loadViewsFrom(__DIR__ . '/../../views', 'blog');
-        $this->loadMigrationsFrom(__DIR__ . '/../../migrations');
-        $this->loadTranslationsFrom(__DIR__ . '/../../lang', 'blog');
+        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'blog');
+        $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
+        $this->loadTranslationsFrom(__DIR__ . '/../../resources/lang', 'blog');
 
         $this->publishes([
-            __DIR__ . '/../../views' => resource_path('views/vendor/blog'),
+            __DIR__ . '/../../resources/views' => resource_path('views/vendor/blog'),
         ], 'views');
 
         $this->publishes([
