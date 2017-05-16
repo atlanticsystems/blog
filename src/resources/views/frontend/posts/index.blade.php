@@ -36,6 +36,12 @@
                     </div>
                 </div>
             @endforeach
+
+            @if ($posts->total())
+                <div class="text-center">
+                    {!! $posts->links() !!}
+                </div>
+            @endif
         </div>
 
         <div class="col-md-3">
