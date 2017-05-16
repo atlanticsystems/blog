@@ -2,6 +2,7 @@
 
 return [
     'alias' => 'URL alias',
+    'blog' => 'Blog',
     'blog_categories' => 'Categorías del blog',
     'blog_posts' => 'Posts del blog',
     'category' => 'Categoría',
