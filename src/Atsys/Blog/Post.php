@@ -43,4 +43,14 @@ class Post extends Model
     {
         return $this->alias[app()->getLocale()];
     }
+
+    public function getShortDescriptionTranslatedAttribute()
+    {
+        return $this->short_description[app()->getLocale()];
+    }
+
+    public function getRouteAttribute()
+    {
+        return $this->postCategory->route . '/' . $this->alias_translated;
+    }
 }

@@ -30,4 +30,9 @@ class PostCategory extends Model
     {
         return $this->alias[app()->getLocale()];
     }
+
+    public function getRouteAttribute()
+    {
+        return $this->alias_translated;
+    }
 }

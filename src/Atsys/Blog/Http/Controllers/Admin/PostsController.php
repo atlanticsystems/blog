@@ -1,6 +1,6 @@
 <?php
 
-namespace Atsys\Blog\Http\Controllers;
+namespace Atsys\Blog\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Atsys\Blog\Post;
