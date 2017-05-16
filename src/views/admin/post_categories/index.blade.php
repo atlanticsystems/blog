@@ -59,7 +59,7 @@
                                         </li>
 
                                         <li>
-                                            <a href="{{ url("admin/post_categories/$category->id") }}" class="send-form" data-method="delete" data-confirm="¿Está seguro de eliminar esta categoría?">
+                                            <a href="{{ url("admin/post_categories/$category->id") }}" class="send-form" data-method="delete" data-confirm="@lang('blog::blog.sure_to_delete_category')">
                                                 <i class="fa fa-fw fa-trash"></i> @lang('blog::blog.delete')
                                             </a>
                                         </li>

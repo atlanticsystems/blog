@@ -30,5 +30,7 @@ return [
     'search' => 'Buscar',
     'short_description' => 'Descripción corta',
     'subtitle' => 'Subtítulo',
+    'sure_to_delete_category' => '¿Está seguro de eliminar esta categoría?',
+    'sure_to_delete_post' => '¿Está seguro de eliminar este post?',
     'title' => 'Título',
 ];
