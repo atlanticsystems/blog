@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-8">
             <h1>
-                <i class="fa fa-th-list"></i> @lang('blog::blog.blog_posts')
+                <i class="fa fa-file-o"></i> @lang('blog::blog.blog_posts')
 
                 <a class="btn btn-primary" href="{{ url('admin/posts/create') }}">
                     <i class="fa fa-plus"></i> @lang('blog::blog.new_post')
