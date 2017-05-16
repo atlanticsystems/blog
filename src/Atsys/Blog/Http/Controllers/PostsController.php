@@ -12,7 +12,7 @@ class PostsController extends Controller
 {
     public function index(Request $request)
     {
-        $query = Post::query()->with('category');
+        $query = Post::query()->with('postCategory');
 
         if ($q = $request->get('q', '')) {
             $query->where('id', 'like', "%$q%")->orWhere('title', 'like', "%$q%");
