@@ -9,7 +9,7 @@ class PostsController extends Controller
 {
     public function index()
     {
-        $posts = Post::with('postCategory')->latest()->paginate(10);
+        $posts = Post::with('postCategory')->latest()->paginate(config('blog.pagination'));
 
         return view('blog::frontend.posts.index', compact('posts'));
     }

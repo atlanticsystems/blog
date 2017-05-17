@@ -5,4 +5,5 @@ return [
         'en' => 'English',
         'es' => 'Español',
     ],
+    'pagination' => 10,
 ];
