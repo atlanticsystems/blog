@@ -38,8 +38,8 @@ class BlogServiceProvider extends ServiceProvider
         Route::model('post_category', PostCategory::class);
 
         // Load view composers
-        View::composer('blog::frontend.posts.index', CategoriesComposer::class);
-        View::composer('blog::frontend.posts.index', LatestPostsComposer::class);
+        View::composer('blog::frontend.categories', CategoriesComposer::class);
+        View::composer('blog::frontend.latest_posts', LatestPostsComposer::class);
     }
 
     /**
