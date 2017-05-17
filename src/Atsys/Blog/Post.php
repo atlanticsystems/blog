@@ -39,6 +39,11 @@ class Post extends Model
         return $this->title[app()->getLocale()];
     }
 
+    public function getSubtitleTranslatedAttribute()
+    {
+        return $this->subtitle[app()->getLocale()];
+    }
+
     public function getAliasTranslatedAttribute()
     {
         return $this->alias[app()->getLocale()];
@@ -47,6 +52,11 @@ class Post extends Model
     public function getShortDescriptionTranslatedAttribute()
     {
         return $this->short_description[app()->getLocale()];
+    }
+
+    public function getDescriptionTranslatedAttribute()
+    {
+        return $this->description[app()->getLocale()];
     }
 
     public function getRouteAttribute()

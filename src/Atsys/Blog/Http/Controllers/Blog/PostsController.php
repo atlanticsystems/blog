@@ -14,4 +14,19 @@ class PostsController extends Controller
 
         return view('blog::frontend.posts.index', compact('posts'));
     }
+
+    public function show($category_slug, $post_slug)
+    {
+        $post = Post::where('alias->' . app()->getLocale(), $post_slug)
+            ->whereHas('postCategory', function ($query) use ($category_slug) {
+                $query->where('alias->' . app()->getLocale(), $category_slug);
+            })
+            ->get();
+
+        if (!$post) {
+            abort(404);
+        }
+
+        return view('blog::frontend.posts.show', compact('post'));
+    }
 }
