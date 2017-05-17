@@ -68,7 +68,7 @@
                 <ul class="list-unstyled">
                     @foreach ($categories as $category)
                         <li>
-                            <a href="{{ url($category->route) }}">{{ $category->title_translated }}</a>
+                            <a href="{{ url($category->route) }}">{{ $category->title_translated }} <span class="label label-primary">{{ $category->posts_count }}</span></a>
                         </li>
                     @endforeach
                 </ul>

@@ -2,9 +2,11 @@
 
 namespace Atsys\Blog;
 
+use Atsys\Blog\Http\ViewComposers\CategoriesComposer;
 use Atsys\Blog\Post;
 use Atsys\Blog\PostCategory;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class BlogServiceProvider extends ServiceProvider
@@ -33,6 +35,9 @@ class BlogServiceProvider extends ServiceProvider
         // Add route model binding
         Route::model('post', Post::class);
         Route::model('post_category', PostCategory::class);
+
+        // Load view composers
+        View::composer('blog::frontend.posts.index', CategoriesComposer::class);
     }
 
     /**
