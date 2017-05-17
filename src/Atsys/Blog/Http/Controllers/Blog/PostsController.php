@@ -20,7 +20,7 @@ class PostsController extends Controller
             ->whereHas('postCategory', function ($query) use ($category_slug) {
                 $query->where('alias->' . app()->getLocale(), $category_slug);
             })
-            ->get();
+            ->first();
 
         if (!$post) {
             abort(404);
