@@ -1,9 +1,7 @@
 <p>
     <small>
-        @lang('blog::blog.published'): <b>{{ $post->created_at->format('d-m-Y') }}</b>
-        &nbsp;|&nbsp;
-        @lang('blog::blog.category'): <b><a href="{{ url($post->postCategory->route) }}">{{ $post->postCategory->title_translated }}</a></b>
+        <i class="fa fa-clock-o"></i> {{ $post->created_at->format('d-m-Y') }}
+        &nbsp;
+        <i class="fa fa-tag"></i> <a href="{{ url($post->postCategory->route) }}">{{ $post->postCategory->title_translated }}</a>
     </small>
 </p>
-
-<hr>
