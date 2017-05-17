@@ -4,7 +4,6 @@ namespace Atsys\Blog\Http\Controllers\Blog;
 
 use App\Http\Controllers\Controller;
 use Atsys\Blog\Post;
-use Atsys\Blog\PostCategory;
 
 class PostsController extends Controller
 {
