@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-md-12">
-            <h1>@lang('blog::blog.blog')</h1>
+            <h1>{{ $page_title or trans('blog::blog.blog') }}</h1>
         </div>
     </div>
 
