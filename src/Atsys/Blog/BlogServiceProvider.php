@@ -3,6 +3,7 @@
 namespace Atsys\Blog;
 
 use Atsys\Blog\Http\ViewComposers\CategoriesComposer;
+use Atsys\Blog\Http\ViewComposers\LatestPostsComposer;
 use Atsys\Blog\Post;
 use Atsys\Blog\PostCategory;
 use Illuminate\Support\Facades\Route;
@@ -38,6 +39,7 @@ class BlogServiceProvider extends ServiceProvider
 
         // Load view composers
         View::composer('blog::frontend.posts.index', CategoriesComposer::class);
+        View::composer('blog::frontend.posts.index', LatestPostsComposer::class);
     }
 
     /**

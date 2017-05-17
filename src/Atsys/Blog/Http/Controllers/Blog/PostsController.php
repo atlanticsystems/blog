@@ -12,8 +12,6 @@ class PostsController extends Controller
     {
         $posts = Post::with('postCategory')->latest()->paginate(10);
 
-        $latest_posts = Post::latest()->take(5)->get();
-
-        return view('blog::frontend.posts.index', compact('posts', 'latest_posts'));
+        return view('blog::frontend.posts.index', compact('posts'));
     }
 }
