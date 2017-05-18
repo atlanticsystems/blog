@@ -32,7 +32,11 @@ class PostsController extends Controller
 
     public function store(PostRequest $request)
     {
-        Post::create($request->all());
+        $post = Post::create($request->all());
+
+        if ($request->hasFile('image') && $request->file('image')->isValid()) {
+            $post->updateImage($request->file('image'));
+        }
 
         return redirect('admin/posts')->with('success', trans('blog::blog.post_created'));
     }
@@ -52,6 +56,10 @@ class PostsController extends Controller
     public function update(PostRequest $request, Post $post)
     {
         $post->update($request->all());
+
+        if ($request->hasFile('image') && $request->file('image')->isValid()) {
+            $post->updateImage($request->file('image'));
+        }
 
         return redirect('admin/posts')->with('success', trans('blog::blog.post_updated'));
     }

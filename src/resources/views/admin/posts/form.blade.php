@@ -26,6 +26,13 @@
             {!! Form::select('post_category_id', $categories, null, ['class' => 'form-control', 'required']) !!}
         </div>
     </div>
+
+    <div class="col-md-4">
+        <div class="form-group">
+            {!! Form::label('image', trans('blog::blog.image')) !!}
+            {!! Form::file('image') !!}
+        </div>
+    </div>
 </div>
 
 <hr>

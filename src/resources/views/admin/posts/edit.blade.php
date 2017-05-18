@@ -11,7 +11,7 @@
                 </a>
             </h1>
 
-            {!! Form::model($post, ['url' => url("admin/posts/$post->id"), 'method' => 'patch']) !!}
+            {!! Form::model($post, ['url' => url("admin/posts/$post->id"), 'method' => 'patch', 'files' => true]) !!}
                 @include('blog::admin.posts.form')
             {!! Form::close() !!}
         </div>

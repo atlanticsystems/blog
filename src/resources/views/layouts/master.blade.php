@@ -19,6 +19,10 @@
                 margin-bottom: 0;
             }
 
+            .latest-posts .post .post-image {
+                margin-bottom: 20px;
+            }
+
             .nav-tabs {
                 margin-bottom: 15px;
             }

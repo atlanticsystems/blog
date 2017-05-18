@@ -40,6 +40,9 @@ class BlogServiceProvider extends ServiceProvider
         // Load view composers
         View::composer('blog::frontend.categories', CategoriesComposer::class);
         View::composer('blog::frontend.latest_posts', LatestPostsComposer::class);
+
+        // Load the package dependencies's service providers
+        $this->app->register(\Intervention\Image\ImageServiceProvider::class);
     }
 
     /**

@@ -1,3 +1,7 @@
+@if ($post->image)
+    <img src="{{ $post->image }}" class="img-responsive post-image">
+@endif
+
 <p>
     <small>
         <i class="fa fa-clock-o"></i> {{ $post->created_at->format('d-m-Y') }}

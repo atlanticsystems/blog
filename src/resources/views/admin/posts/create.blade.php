@@ -11,7 +11,7 @@
                 </a>
             </h1>
 
-            {!! Form::open(['url' => url('admin/posts'), 'method' => 'post']) !!}
+            {!! Form::open(['url' => url('admin/posts'), 'method' => 'post', 'files' => true]) !!}
                 @include('blog::admin.posts.form')
             {!! Form::close() !!}
         </div>

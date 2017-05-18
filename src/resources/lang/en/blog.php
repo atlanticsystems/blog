@@ -16,6 +16,7 @@ return [
     'edit' => 'Edit',
     'edit_category' => 'Edit category',
     'edit_post' => 'Edit post',
+    'image' => 'Image',
     'latest_posts' => 'Latest posts',
     'meta_description' => 'META description',
     'meta_title' => 'META title',

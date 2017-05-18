@@ -11,7 +11,8 @@
     "homepage": "https://github.com/josebailo/blog",
     "require": {
         "php": ">=5.6.4",
-        "illuminate/support": "~5.3"
+        "illuminate/support": "~5.3",
+        "intervention/image": "^2.3"
     },
     "autoload": {
         "psr-4": {
@@ -38,5 +39,11 @@
             "role": "Designer"
         }
     ],
-    "minimum-stability": "master"
+    "minimum-stability": "master",
+    "scripts": {
+        "post-package-install" : [
+            "mkdir public/images",
+            "mkdir public/images/blog_posts"
+        ]
+    }
 }
