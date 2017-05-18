@@ -18,6 +18,10 @@
             .latest-posts .post .title {
                 margin-bottom: 0;
             }
+
+            .nav-tabs {
+                margin-bottom: 15px;
+            }
         </style>
     </head>
 
