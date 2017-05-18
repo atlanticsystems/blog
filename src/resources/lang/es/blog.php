@@ -22,6 +22,7 @@ return [
     'name' => 'Nombre',
     'new_category' => 'Nueva categoría',
     'new_post' => 'Nuevo post',
+    'posts' => 'Posts',
     'post_created' => 'Post creado con éxito',
     'post_data' => 'Datos del post',
     'post_deleted' => 'Post eliminado con éxito',
