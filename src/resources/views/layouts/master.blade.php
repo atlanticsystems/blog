@@ -97,5 +97,6 @@
                 laravel.initialize();
             })();
         </script>
+        @yield('scripts')
     </body>
 </html>

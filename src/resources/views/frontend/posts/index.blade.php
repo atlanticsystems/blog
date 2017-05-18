@@ -18,7 +18,7 @@
 
                         @include('blog::frontend.posts.post_data')
 
-                        <p>{{ $post->short_description_translated }}</p>
+                        {!! $post->short_description_translated !!}
 
                         <div class="text-right">
                             <a href="{{ url($post->route) }}" class="btn btn-primary">@lang('blog::blog.read_more')</a>

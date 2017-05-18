@@ -12,7 +12,7 @@
         <div class="col-md-9">
             @include('blog::frontend.posts.post_data')
 
-            <p>{{ $post->description_translated }}</p>
+            {!! $post->description_translated !!}
         </div>
 
         <div class="col-md-3">
