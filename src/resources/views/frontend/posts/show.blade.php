@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-xs-12">
             <h1>{{ $post->title_translated }}</h1>
             <h2>{{ $post->subtitle_translated }}</h2>
         </div>

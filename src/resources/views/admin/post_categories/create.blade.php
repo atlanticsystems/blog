@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-xs-12">
             <h1>
                 <i class="fa fa-th-list"></i> @lang('blog::blog.new_category')
 

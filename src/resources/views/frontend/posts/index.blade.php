@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-xs-12">
             <h1>{{ $page_title or trans('blog::blog.blog') }}</h1>
         </div>
     </div>
@@ -11,7 +11,7 @@
         <div class="col-md-9">
             @foreach ($posts as $post)
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-xs-12">
                         <h2>
                             <a href="{{ url($post->route) }}">{{ $post->title_translated }}</a>
                         </h2>
