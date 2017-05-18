@@ -17,14 +17,14 @@
         <div class="col-md-4">
             <div class="form-group">
                 {!! Form::label("title[$key]", trans('blog::blog.title') . " ($language)") !!}
-                {!! Form::text("title[$key]", null, ['class' => 'form-control input-lg', 'required']) !!}
+                {!! Form::text("title[$key]", null, ['class' => 'form-control', 'required']) !!}
             </div>
         </div>
 
         <div class="col-md-4">
             <div class="form-group">
                 {!! Form::label("alias[$key]", trans('blog::blog.alias') . " ($language)") !!}
-                {!! Form::text("alias[$key]", null, ['class' => 'form-control input-lg', 'required']) !!}
+                {!! Form::text("alias[$key]", null, ['class' => 'form-control', 'required']) !!}
             </div>
         </div>
     </div>

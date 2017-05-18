@@ -21,7 +21,7 @@
                         <p>{{ $post->short_description_translated }}</p>
 
                         <div class="text-right">
-                            <a href="{{ url($post->route) }}" class="btn btn-lg btn-primary">@lang('blog::blog.read_more')</a>
+                            <a href="{{ url($post->route) }}" class="btn btn-primary">@lang('blog::blog.read_more')</a>
                         </div>
 
                         <hr>

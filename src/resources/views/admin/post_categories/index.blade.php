@@ -15,10 +15,10 @@
         <div class="col-md-4">
             {!! Form::open(['url' => url('admin/post_categories'), 'method' => 'get', 'class' => 'navbar-form pull-right']) !!}
                 <div class="input-group">
-                    {!! Form::text('q', request()->get('q'), ['class' => 'form-control input-lg', 'placeholder' => trans('blog::blog.search')]) !!}
+                    {!! Form::text('q', request()->get('q'), ['class' => 'form-control', 'placeholder' => trans('blog::blog.search')]) !!}
 
                     <div class="input-group-btn">
-                        <button class="btn btn-info btn-lg" type="submit">
+                        <button class="btn btn-info" type="submit">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
