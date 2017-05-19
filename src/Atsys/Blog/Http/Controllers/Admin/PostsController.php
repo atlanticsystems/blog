@@ -32,7 +32,7 @@ class PostsController extends Controller
 
     public function store(PostRequest $request)
     {
-        $post = Post::create($request->all());
+        $post = Post::create($request->except(['image']));
 
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
             $post->updateImage($request->file('image'));
@@ -55,7 +55,7 @@ class PostsController extends Controller
 
     public function update(PostRequest $request, Post $post)
     {
-        $post->update($request->all());
+        $post->update($request->except(['image']));
 
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
             $post->updateImage($request->file('image'));
