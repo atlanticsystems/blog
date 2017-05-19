@@ -15,7 +15,7 @@ class PostsController extends Controller
         $query = Post::query()->with('postCategory');
 
         if ($q = $request->get('q', '')) {
-            $query->where('id', 'like', "%$q%")->orWhere('title', 'like', "%$q%");
+            $query->where('id', 'like', "%$q%")->orWhere('title->' . app()->getLocale(), 'like', "%$q%");
         }
 
         $posts = $query->get();

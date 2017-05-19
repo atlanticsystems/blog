@@ -14,7 +14,7 @@ class PostCategoriesController extends Controller
         $query = PostCategory::query();
 
         if ($q = $request->get('q', '')) {
-            $query->where('id', 'like', "%$q%")->orWhere('title', 'like', "%$q%");
+            $query->where('id', 'like', "%$q%")->orWhere('title->' . app()->getLocale(), 'like', "%$q%");
         }
 
         $categories = $query->get();
