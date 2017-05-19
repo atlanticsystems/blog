@@ -63,6 +63,16 @@ class Post extends Model
         return $this->description[app()->getLocale()];
     }
 
+    public function getMetaTitleTranslatedAttribute()
+    {
+        return $this->meta_title[app()->getLocale()];
+    }
+
+    public function getMetaDescriptionTranslatedAttribute()
+    {
+        return $this->meta_description[app()->getLocale()];
+    }
+
     public function getRouteAttribute()
     {
         return "{$this->postCategory->route}/{$this->alias_translated}";
