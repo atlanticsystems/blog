@@ -15,7 +15,9 @@ class AddDefaultValueToImagesFieldsFromPostsTable extends Migration
     {
         Schema::table('posts', function (Blueprint $table) {
             $table->dropColumn(['thumb', 'image']);
+        });
 
+        Schema::table('posts', function (Blueprint $table) {
             $table->string('thumb')->default('')->after('meta_title');
             $table->string('image')->default('')->after('meta_title');
         });
@@ -30,7 +32,9 @@ class AddDefaultValueToImagesFieldsFromPostsTable extends Migration
     {
         Schema::table('posts', function (Blueprint $table) {
             $table->dropColumn(['thumb', 'image']);
+        });
 
+        Schema::table('posts', function (Blueprint $table) {
             $table->string('thumb')->after('meta_title');
             $table->string('image')->after('meta_title');
         });
