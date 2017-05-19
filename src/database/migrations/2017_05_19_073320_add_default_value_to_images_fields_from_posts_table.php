@@ -14,8 +14,10 @@ class AddDefaultValueToImagesFieldsFromPostsTable extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->string('thumb')->default('')->change();
-            $table->string('image')->default('')->change();
+            $table->dropColumn(['thumb', 'image']);
+
+            $table->string('thumb')->default('')->after('meta_title');
+            $table->string('image')->default('')->after('meta_title');
         });
     }
 
@@ -27,8 +29,10 @@ class AddDefaultValueToImagesFieldsFromPostsTable extends Migration
     public function down()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->string('thumb')->change();
-            $table->string('image')->change();
+            $table->dropColumn(['thumb', 'image']);
+
+            $table->string('thumb')->after('meta_title');
+            $table->string('image')->after('meta_title');
         });
     }
 }
