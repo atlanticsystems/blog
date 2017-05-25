@@ -9,7 +9,6 @@ use Intervention\Image\Facades\Image;
 class Post extends Model
 {
     protected $fillable = [
-        'post_category_id',
         'published',
         'title',
         'alias',
@@ -33,9 +32,9 @@ class Post extends Model
         'meta_title' => 'array',
     ];
 
-    public function postCategory()
+    public function postCategories()
     {
-        return $this->belongsTo('Atsys\Blog\PostCategory');
+        return $this->belongsToMany('Atsys\Blog\PostCategory');
     }
 
     public function getTitleTranslatedAttribute()
@@ -75,7 +74,7 @@ class Post extends Model
 
     public function getRouteAttribute()
     {
-        return "{$this->postCategory->route}/{$this->alias_translated}";
+        return $this->postCategories->first()->route . '/' . $this->alias_translated;
     }
 
     public function updateImage($file)

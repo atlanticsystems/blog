@@ -18,7 +18,7 @@ class PostCategory extends Model
 
     public function posts()
     {
-        return $this->hasMany('Atsys\Blog\Post');
+        return $this->belongsToMany('Atsys\Blog\Post');
     }
 
     public function getTitleTranslatedAttribute()

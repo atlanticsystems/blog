@@ -15,7 +15,7 @@ class CategoryPostsController extends Controller
             abort(404);
         }
 
-        $posts = $category->posts()->with('postCategory')->latest()->paginate(config('blog.pagination'));
+        $posts = $category->posts()->with('postCategories')->latest()->paginate(config('blog.pagination'));
 
         $page_title = $category->title_translated;
 

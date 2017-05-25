@@ -25,7 +25,8 @@ class PostRequest extends FormRequest
     {
 
         return [
-            'post_category_id' => 'required|exists:post_categories,id',
+            'post_categories' => 'required|array',
+            'post_categories.*' => 'exists:post_categories,id',
             'published' => 'required|boolean',
             'image' => 'file|image',
             'title.*' => "required",

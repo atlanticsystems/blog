@@ -22,8 +22,8 @@
 
     <div class="col-md-4">
         <div class="form-group">
-            {!! Form::label('post_category_id', trans('blog::blog.category')) !!}
-            {!! Form::select('post_category_id', $categories, null, ['class' => 'form-control', 'required']) !!}
+            {!! Form::label('post_categories', trans('blog::blog.category')) !!}
+            {!! Form::select('post_categories[]', $categories, null, ['class' => 'form-control select2', 'required']) !!}
         </div>
     </div>
 

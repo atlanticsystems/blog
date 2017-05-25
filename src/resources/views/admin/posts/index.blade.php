@@ -46,7 +46,7 @@
                                 <a href="{{ url("admin/posts/$post->id/edit") }}">{{ $post->title_translated }}</a>
                             </td>
                             <td>{{ $post->alias_translated }}</td>
-                            <td>{{ $post->postCategory->title_translated }}</td>
+                            <td>{{ $post->postCategories->pluck('title_translated')->implode(', ') }}</td>
                             <td>
                                 <div class="btn-group" role="group">
                                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
