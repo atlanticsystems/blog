@@ -2,6 +2,12 @@
 
 Simple blog optimized for SEO.
 
+## Dependencies
+
+Laravel Collective Package. Installation instructions:
+https://laravelcollective.com/docs/master/html#installation
+
+
 ## Installation
 
 You can install the package via composer:
